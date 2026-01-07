@@ -7,6 +7,7 @@ vim.keymap.set("n", "<leader>x", ":q!<CR>", {desc = "Quit without saving"})
 vim.keymap.set("n", "<leader>e", ":Ex<CR>", {desc = "Go to file manager"})
 vim.keymap.set("n", "<leader>s", ":source %<CR>", {desc = "Source the changes"})
 vim.keymap.set("n", "<S-c>", ":nohl<CR>", {desc = "Clear find highlights"})
+vim.keymap.set("n", "<C-a>", "gg<S-v>G", {desc = "Select all"})
 
 -- Insert Mode
 vim.keymap.set("i", "jk", "<Esc>", {desc = "Escape from insert mode"})
