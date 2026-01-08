@@ -33,7 +33,7 @@ vim.opt.scrolloff = 8            -- Keep 8 lines visible above/below cursor
 vim.opt.sidescrolloff = 8        -- Horizontal scroll padding
 
 -- Undo & backup
-vim.opt.undofile = true          -- Persistent undo
+vim.opt.undofile = false          -- Persistent undo
 vim.opt.backup = false
 vim.opt.writebackup = false
 vim.opt.swapfile = false
