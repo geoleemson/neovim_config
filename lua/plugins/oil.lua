@@ -1,3 +1,13 @@
+--Keybindings--
+--Hypen: To open oil explorer
+--<leader>Hyphen: To open explorer in float mode
+
+--Other features
+--Can create files like entering lines in code
+--Use the file explorer like a text editor
+
+--Saving files and deleting
+--After entering a file name save like saving a code
 return {
 	"stevearc/oil.nvim",
     -- enabled = false,
