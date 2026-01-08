@@ -1,7 +1,8 @@
-## Must have plugins
+## Features would like to have
+### Highlighting
+- Highlight bracket when one of them has cursor
 
-
-## Plugin types to install
+## Plugin types 
 - Status line
 - Startup page
 - File Explorer
