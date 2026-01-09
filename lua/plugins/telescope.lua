@@ -1,5 +1,5 @@
 -- LIVE GREP --
--- Live grep is the way to find text inside files
+-- Live grep is a way to find text inside files
 -- But for it to work you need ripgrep from BurntSushi
 -- Goto https://github.com/BurntSushi/ripgrep for installation details
 -- It's installed in system level
@@ -16,7 +16,7 @@ return {
             { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
         },
         config = function()
-            print("")
+            vim.keymap.set("n", "<leader>ff", require('telescope.builtin').find_files)
         end
     }
 }
