@@ -1,3 +1,5 @@
+### Current branch being used
+ 
 ## Still to get  
 - Plugins for quotes/bracket and so on 
 - Setup telescope
