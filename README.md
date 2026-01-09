@@ -1,6 +1,6 @@
-## Features would like to have
-### Highlighting
-- Highlight bracket when one of them has cursor
+## Still to get  
+- Plugins for quotes/bracket and so on 
+- Setup telescope
 
 ## Plugin types 
 - Status line
