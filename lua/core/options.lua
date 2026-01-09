@@ -1,4 +1,4 @@
-vim.cmd("let g:netrw_banner = 0")
+-- vim.cmd("let g:netrw_banner = 0")
 
 -- Line numbers
 vim.opt.number = true            -- Show absolute line numbers
@@ -23,6 +23,7 @@ vim.opt.cursorline = true        -- Highlight current line
 vim.opt.signcolumn = "yes"       -- Always show sign column (for diagnostics, git)
 vim.opt.termguicolors = true     -- Enable true color support
 vim.opt.wrap = false             -- Disable line wrapping
+vim.opt.background = "dark"
 
 -- Splits
 vim.opt.splitright = true        -- Vertical splits open to the right
