@@ -11,6 +11,9 @@ vim.keymap.set("n", "<C-a>", "gg<S-v>G", {desc = "Select all"})
 vim.keymap.set("n", "<C-_>", "gcc", {remap = true}, {desc = "Comment line"})
 vim.keymap.set("n", "<leader>u", ":e!<CR>", {desc = "Undo all changes to file since opening or last save"})
 
+-- Telescope
+vim.keymap.set("n", "<leader>ff", ":Telescope find_files<CR>", {desc = "Telescope: find files"})
+
 -- Insert Mode
 vim.keymap.set("i", "jk", "<Esc>", {desc = "Escape from insert mode"})
 
