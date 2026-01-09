@@ -1,19 +1,19 @@
---WHAT IS IT?
---It's a file explorer in floating style
-
--- KEYBINDINGS
--- <leader>ee: to open the mini explorer
--- <leader>ef: Open file explorer in current directory
--- q: to exit explorer
--- L/Enter: Open directory
--- -/H: Exit directory
-
--- CREATING FILES AND FOLDERS
--- Can create files like entering a line in Insert mode
--- Exit Insert mode after entering filename and then hit '='
--- Will ask for confirmation
--- Same for deletion
--- For folders just end the name with '/'
+-- --WHAT IS IT?
+-- --It's a file explorer in floating style
+--
+-- -- KEYBINDINGS
+-- -- <leader>ee: to open the mini explorer
+-- -- <leader>ef: Open file explorer in current directory
+-- -- q: to exit explorer
+-- -- L/Enter: Open directory
+-- -- -/H: Exit directory
+--
+-- -- CREATING FILES AND FOLDERS
+-- -- Can create files like entering a line in Insert mode
+-- -- Exit Insert mode after entering filename and then hit '='
+-- -- Will ask for confirmation
+-- -- Same for deletion
+-- -- For folders just end the name with '/'
 return {
     -- Mini Nvim
     {"echasnovski/mini.nvim", version = false },

@@ -1,4 +1,4 @@
--- ~/.config/nvim/lua/plugins/tokyonight.lua
+-- -- ~/.config/nvim/lua/plugins/tokyonight.lua
 return {
   {
     "folke/tokyonight.nvim",
