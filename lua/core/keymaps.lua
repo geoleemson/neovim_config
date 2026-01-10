@@ -10,6 +10,7 @@ vim.keymap.set("n", "<S-c>", ":nohl<CR>", {desc = "Clear find highlights"})
 vim.keymap.set("n", "<C-a>", "gg<S-v>G", {desc = "Select all"})
 vim.keymap.set("n", "<C-/>", "gcc", {remap = true}, {desc = "Comment line"})
 vim.keymap.set("n", "<leader>u", ":e!<CR>", {desc = "Undo all changes to file since opening or last save"})
+vim.keymap.set("n", "<leader>t", "<C-w>w", {desc = "Switch tabs"})
 
 -- Telescope
 --vim.keymap.set("n", "<leader>ff", ":Telescope find_files<CR>", {desc = "Telescope: find files"})
