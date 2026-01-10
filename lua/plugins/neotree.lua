@@ -15,7 +15,7 @@ return {
     },
     keys = {
         { 
-            "<leader>nf", function()
+            "<leader>nt", function()
                 require("neo-tree.command").execute({
                     source = "filesystem",
                     reveal = true,
