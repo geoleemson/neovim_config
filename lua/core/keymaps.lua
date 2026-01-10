@@ -2,7 +2,7 @@ vim.g.mapleader = " "
 
 -- Normal Mode
 vim.keymap.set("n", "<leader>w", ":w<CR>", {desc = "save file"})
-vim.keymap.set("n", "<leader>q", ":q<CR>", {desc = "Quit"})
+vim.keymap.set("n", "<leader>q", ":qa<CR>", {desc = "Quit"})
 vim.keymap.set("n", "<leader>x", ":q!<CR>", {desc = "Quit without saving"})
 -- vim.keymap.set("n", "<leader>e", ":Ex<CR>", {desc = "Go to file manager"})
 vim.keymap.set("n", "<leader>s", ":source %<CR>", {desc = "Source the changes"})
