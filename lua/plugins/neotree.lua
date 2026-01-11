@@ -10,12 +10,12 @@ return {
     opts = {
         window = {
             position = "left",
-            width = 25 
+            width = 30 
         }
     },
     keys = {
         { 
-            "<leader>nt", function()
+            "<leader>nf", function()
                 require("neo-tree.command").execute({
                     source = "filesystem",
                     reveal = true,
