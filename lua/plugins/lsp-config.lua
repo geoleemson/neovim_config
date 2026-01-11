@@ -1,3 +1,8 @@
+--To check which lsp server is currently running
+--:LspInfo
+--
+--To check which language servers are installed and available ones
+--:Mason
 return {
     {
         "williamboman/mason.nvim",

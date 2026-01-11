@@ -1,5 +1,10 @@
 -- vim.cmd("let g:netrw_banner = 0")
 
+-- shows warnings/errors/hints at end of line
+vim.diagnostic.config({
+  virtual_text = true,
+})
+
 -- Line numbers
 vim.opt.number = true            -- Show absolute line numbers
 vim.opt.relativenumber = true    -- Show relative line numbers for easier movement
