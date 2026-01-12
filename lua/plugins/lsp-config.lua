@@ -15,7 +15,8 @@ return {
         "williamboman/mason-lspconfig.nvim",
         config = function()
             require("mason-lspconfig").setup({
-                ensure_installed = { "lua_ls", "pylsp" }
+                -- Might need to install: apt install python3.10-venv
+                ensure_installed = { "lua_ls", "basedpyright" }
             })
         end
     },
