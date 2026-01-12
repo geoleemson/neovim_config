@@ -24,6 +24,19 @@ return {
         config = function()
             -- local lspconfig = require("lspconfig")
             vim.lsp.config("lua_ls", {})
+            vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
+            vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
         end
-    }
+    },
+    {
+        "folke/lazydev.nvim",
+        ft = "lua", -- only load on lua files
+        opts = {
+            library = {
+                -- See the configuration section for more details
+                -- Load luvit types when the `vim.uv` word is found
+                { path = "${3rd}/luv/library", words = { "vim%.uv" } },
+            },
+        },
+    },
 }
