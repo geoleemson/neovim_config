@@ -12,6 +12,7 @@ vim.keymap.set("n", "<C-/>", "gcc", { remap = true, desc = "Comment line"})
 vim.keymap.set("n", "<leader>u", ":e!<CR>", {desc = "Undo all changes to file since opening or last save"})
 vim.keymap.set("n", "<leader>y", "<cmd>Telescope current_buffer_fuzzy_find<cr>", {desc = "Testing functions"})
 vim.keymap.set("n", "<leader>tw", [[<Cmd>%s/\s\+$//e<CR>]], {desc = "Testing functions"})
+vim.keymap.set("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<cr>", {desc = "Code action"})
 
 -- Telescope
 --vim.keymap.set("n", "<leader>ff", ":Telescope find_files<CR>", {desc = "Telescope: find files"})
@@ -30,3 +31,4 @@ vim.keymap.set("v", "<", "<gv", {desc = "Indent left"})
 vim.keymap.set("v", ">", ">gv", {desc = "Indent right"})
 vim.keymap.set("v", "<C-_>", "gcgv", { remap = true, desc = "Comment block"})
 vim.keymap.set("v", "<C-/>", "gcgv", { remap = true, desc = "Comment block"})
+vim.keymap.set("v", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<cr>", {desc = "Code action"})
