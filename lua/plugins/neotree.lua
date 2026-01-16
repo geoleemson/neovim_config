@@ -10,18 +10,18 @@ return {
     opts = {
         window = {
             position = "left",
-            width = 30 
+            width = 30
         }
     },
     keys = {
-        { 
-            "<leader>nf", function()
+        {
+            "<leader>e", function()
                 require("neo-tree.command").execute({
                     source = "filesystem",
                     reveal = true,
                     position = "left"
                 })
-            end, {desc = "Open Neotree"} 
-        } 
+            end, {desc = "Open Neotree"}
+        }
     }
 }
