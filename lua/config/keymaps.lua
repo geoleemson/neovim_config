@@ -10,7 +10,6 @@ vim.keymap.set("n", "<C-a>", "gg<S-v>G", {desc = "Select all"})
 vim.keymap.set("n", "<C-_>", "gcc", { remap = true, desc = "Comment line"})
 vim.keymap.set("n", "<C-/>", "gcc", { remap = true, desc = "Comment line"})
 vim.keymap.set("n", "<leader>u", ":e!<CR>", {desc = "Undo all changes to file since opening or last save"})
-vim.keymap.set("n", "<leader>t", "<C-w>w", {desc = "Switch tabs"})
 vim.keymap.set("n", "<leader>y", "<cmd>Telescope current_buffer_fuzzy_find<cr>", {desc = "Testing functions"})
 vim.keymap.set("n", "<leader>tw", [[<Cmd>%s/\s\+$//e<CR>]], {desc = "Testing functions"})
 
