@@ -11,8 +11,12 @@ vim.keymap.set("n", "<C-_>", "gcc", { remap = true, desc = "Comment line"})
 vim.keymap.set("n", "<C-/>", "gcc", { remap = true, desc = "Comment line"})
 vim.keymap.set("n", "<leader>u", ":e!<CR>", {desc = "Undo all changes to file since opening or last save"})
 vim.keymap.set("n", "<leader>y", "<cmd>Telescope current_buffer_fuzzy_find<cr>", {desc = "Testing functions"})
-vim.keymap.set("n", "<leader>tw", [[<Cmd>%s/\s\+$//e<CR>]], {desc = "Testing functions"})
+vim.keymap.set("n", "<leader>tw", [[<cmd>%s/\s\+$//e<cr>]], {desc = "Remove trailing whitespaces"})
+vim.keymap.set("n", "<leader>cr", [[<cmd>%s/\r\+$//<CR>]], {desc = "Remove all carriages"})
 vim.keymap.set("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<cr>", {desc = "Code action"})
+
+-- ToggleTerm
+vim.keymap.set("t", "<Esc>", [[<C-\><C-n>:ToggleTerm<CR>]] ,{desc = "Code action"})
 
 -- Telescope
 --vim.keymap.set("n", "<leader>ff", ":Telescope find_files<CR>", {desc = "Telescope: find files"})
