@@ -2,6 +2,7 @@
 require("config")
 require("lazyvim")
 
+-- Hide the Error/Warnings and only show symbols in gutter
 vim.diagnostic.config({
   virtual_text = false,   -- hide inline/EOL diagnostics
   signs = true,           -- keep gutter signs
