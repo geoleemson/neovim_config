@@ -11,22 +11,30 @@ return {
         end
     },
     {
-
         "williamboman/mason-lspconfig.nvim",
+        dependencies = {
+            "neovim/nvim-lspconfig",
+            "hrsh7th/cmp-nvim-lsp",
+        },
         config = function()
+            local capabilities = require("cmp_nvim_lsp").default_capabilities()
+            local lspconfig = require("lspconfig")
             require("mason-lspconfig").setup({
                 -- Might need to install: apt install python3.10-venv
-                ensure_installed = { "lua_ls", "basedpyright" }
+                ensure_installed = { "lua_ls", "basedpyright" },
+                handlers = {
+                    function(server)
+                        lspconfig[server].setup({
+                            capabilities = capabilities,
+                            on_attach = function(_, bufnr)
+                                local opts = { buffer = bufnr }
+                                vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+                                vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+                            end,
+                        })
+                    end,
+                },
             })
-        end
-    },
-    {
-        "neovim/nvim-lspconfig",
-        config = function()
-            -- local lspconfig = require("lspconfig")
-            vim.lsp.config("lua_ls", {})
-            vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
-            vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
         end
     },
     {
@@ -39,6 +47,5 @@ return {
                 { path = "${3rd}/luv/library", words = { "vim%.uv" } },
             },
         },
-    },
+    }
 }
-

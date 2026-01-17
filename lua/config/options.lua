@@ -2,7 +2,7 @@
 
 -- shows warnings/errors/hints at end of line
 vim.diagnostic.config({
-  virtual_text = true,
+    virtual_text = true,
 })
 
 -- Line numbers
