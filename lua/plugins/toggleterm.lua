@@ -10,6 +10,18 @@ return{
             vim.cmd("ToggleTerm direction=float")
             require("toggleterm").exec("python3 " .. file)
         end)
+        vim.keymap.set("n", "<leader>pb", function ()
+            vim.cmd("ToggleTerm direction=float")
+            require("toggleterm").exec("pio run")
+        end)
+        vim.keymap.set({"n", "t"}, "<leader>pu", function ()
+            vim.cmd("ToggleTerm direction=float")
+            require("toggleterm").exec("pio run -t upload")
+        end)
+        vim.keymap.set("n", "<leader>pm", function ()
+            vim.cmd("ToggleTerm direction=float")
+            require("toggleterm").exec("pio device monitor")
+        end)
         require("toggleterm").setup({
             direction = "horizontal",
             size = 15,

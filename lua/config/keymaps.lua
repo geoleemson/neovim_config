@@ -9,11 +9,20 @@ vim.keymap.set("n", "<S-c>", ":nohl<CR>", {desc = "Clear find highlights"})
 vim.keymap.set("n", "<C-a>", "gg<S-v>G", {desc = "Select all"})
 vim.keymap.set("n", "<C-_>", "gcc", { remap = true, desc = "Comment line"})
 vim.keymap.set("n", "<C-/>", "gcc", { remap = true, desc = "Comment line"})
-vim.keymap.set("n", "<leader>u", ":e!<CR>", {desc = "Undo all changes to file since opening or last save"})
+vim.keymap.set("n", "<leader>u", ":e!<CR>", {silent = true, desc = "Undo all changes to file since opening or last save"})
 vim.keymap.set("n", "<leader>y", "<cmd>Telescope current_buffer_fuzzy_find<cr>", {desc = "Testing functions"})
 vim.keymap.set("n", "<leader>tw", [[<cmd>%s/\s\+$//e<cr>]], {desc = "Remove trailing whitespaces"})
 vim.keymap.set("n", "<leader>cr", [[<cmd>%s/\r\+$//<CR>]], {desc = "Remove all carriages"})
 vim.keymap.set("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<cr>", {desc = "Code action"})
+vim.keymap.set("n", "<C-h>", "<C-w>h", {desc = "Move to right window"})
+vim.keymap.set("n", "<C-l>", "<C-w>l", {desc = "Move to left window"})
+vim.keymap.set("n", "<C-j>", "<C-w>j", {desc = "Move to up window"})
+vim.keymap.set("n", "<C-k>", "<C-w>k", {desc = "Move to down window"})
+
+-- Delete/change without yanking
+vim.keymap.set({ "n", "v" }, "d", '"_d')
+vim.keymap.set({ "n", "v" }, "c", '"_c')
+vim.keymap.set({ "n", "v" }, "x", '"_x')
 
 -- ToggleTerm
 vim.keymap.set("t", "<Esc>", [[<C-\><C-n>:ToggleTerm<CR>]] ,{desc = "Code action"})
