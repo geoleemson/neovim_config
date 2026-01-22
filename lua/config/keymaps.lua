@@ -14,10 +14,12 @@ vim.keymap.set("n", "<leader>y", "<cmd>Telescope current_buffer_fuzzy_find<cr>",
 vim.keymap.set("n", "<leader>tw", [[<cmd>%s/\s\+$//e<cr>]], {desc = "Remove trailing whitespaces"})
 vim.keymap.set("n", "<leader>cr", [[<cmd>%s/\r\+$//<CR>]], {desc = "Remove all carriages"})
 vim.keymap.set("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<cr>", {desc = "Code action"})
-vim.keymap.set("n", "<C-h>", "<C-w>h", {desc = "Move to right window"})
-vim.keymap.set("n", "<C-l>", "<C-w>l", {desc = "Move to left window"})
-vim.keymap.set("n", "<C-j>", "<C-w>j", {desc = "Move to up window"})
-vim.keymap.set("n", "<C-k>", "<C-w>k", {desc = "Move to down window"})
+
+-- Moving between windows
+vim.keymap.set({ "n", "t" }, "<leader>l", "<cmd>wincmd l<cr>", {desc = "Move to right window"})
+vim.keymap.set({ "n", "t" }, "<leader>h", "<cmd>wincmd h<cr>", {desc = "Move to left window"})
+vim.keymap.set({ "n", "t" }, "<leader>k", "<cmd>wincmd k<cr>", {desc = "Move to up window"})
+vim.keymap.set({ "n", "t" }, "<leader>j", "<cmd>wincmd j<cr>", {desc = "Move to down window"})
 
 -- Delete/change without yanking
 vim.keymap.set({ "n", "v" }, "d", '"_d')
