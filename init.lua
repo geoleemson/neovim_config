@@ -3,7 +3,7 @@ require("config")
 require("lazyvim")
 
 -- Toggle diagnostics
-local diagnostics_visible = true
+local diagnostics_visible = false
 
 -- Hide the Error/Warnings and only show symbols in gutter
 vim.diagnostic.config({

@@ -21,6 +21,9 @@ vim.keymap.set({ "n", "t" }, "<leader>h", "<cmd>wincmd h<cr>", {desc = "Move to 
 vim.keymap.set({ "n", "t" }, "<leader>k", "<cmd>wincmd k<cr>", {desc = "Move to up window"})
 vim.keymap.set({ "n", "t" }, "<leader>j", "<cmd>wincmd j<cr>", {desc = "Move to down window"})
 
+-- Remap Visual block kemap
+vim.keymap.set({ "n", "v"}, "<C-q>", "<C-v>", { noremap = true})
+
 -- Delete/change without yanking
 vim.keymap.set({ "n", "v" }, "d", '"_d')
 vim.keymap.set({ "n", "v" }, "c", '"_c')
