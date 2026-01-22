@@ -18,7 +18,7 @@ return{
             vim.cmd("ToggleTerm direction=float")
             require("toggleterm").exec("pio run -t upload")
         end)
-        vim.keymap.set("n", "<leader>pm", function ()
+        vim.keymap.set({"n", "t"}, "<leader>pm", function ()
             vim.cmd("ToggleTerm direction=float")
             require("toggleterm").exec("pio device monitor")
         end)
