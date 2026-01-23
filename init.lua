@@ -1,4 +1,6 @@
 -- Path ~/.config/nvim/lua is added automatically
+-- If the provided name is a folder it loads the init file inside
+-- If it's a file, it loads that
 require("config")
 require("lazyvim")
 

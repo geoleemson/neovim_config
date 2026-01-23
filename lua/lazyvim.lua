@@ -11,4 +11,9 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup("plugins")
+-- Don't use two setup lines for multiple folders
+-- Use the below format and use as many folders as you want
+require("lazy").setup({
+    { import = "plugins"},
+    { import = "plugins.lsp"},
+})
