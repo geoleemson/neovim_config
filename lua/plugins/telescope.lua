@@ -29,7 +29,7 @@ return {
                 require('telescope.builtin').find_files{
                     cwd = vim.fn.stdpath("config")
                 }
-            end)
+            end, { desc = "Telescope: fzf in nvim config"})
             -- Add your custom file paths
             -- vim.keymap.set("n", "<leader>fd", function()
             --     require('telescope.builtin').find_files{
