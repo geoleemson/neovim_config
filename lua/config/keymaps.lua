@@ -1,6 +1,8 @@
 vim.g.mapleader = " "
 
 -- Normal Mode
+vim.keymap.set("n", "J", "5j", {desc = "save file"})
+vim.keymap.set("n", "K", "5k", {desc = "save file"})
 vim.keymap.set("n", "<leader>w", ":w<CR>", {desc = "save file"})
 vim.keymap.set("n", "<leader>q", ":qa<CR>", {desc = "Quit"})
 vim.keymap.set("n", "<leader>x", ":q!<CR>", {desc = "Quit without saving"})
