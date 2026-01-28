@@ -20,7 +20,7 @@ return {
             vim.keymap.set("n", "<leader>lg", require('telescope.builtin').live_grep, { desc = "Telescope: Live Grep in cwd"})
             vim.keymap.set("n", "<leader>of", require('telescope.builtin').oldfiles, { desc = "Telescope: Open Recent Files" })
             vim.keymap.set("n", "<leader>fif", require('telescope.builtin').current_buffer_fuzzy_find, { desc = "Telescope: Fuzzy find in current file"})
-            vim.keymap.set("n", "<leader>tr", require('telescope.builtin').resume)
+            -- vim.keymap.set("n", "<leader>tr", require('telescope.builtin').resume)
             vim.keymap.set("n", "<leader>gb", require('telescope.builtin').git_branches, { desc = "Telescope: Show git branches"})
             vim.keymap.set("n", "<leader>gc", require('telescope.builtin').git_commits, { desc = "Telescope: Show git commits"})
             vim.keymap.set("n", "<leader>gs", require('telescope.builtin').git_status, { desc = "Telescope: Show git status"})
