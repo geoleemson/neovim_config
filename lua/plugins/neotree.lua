@@ -13,15 +13,15 @@ return {
             width = 30
         }
     },
-    keys = {
-        {
-            "<leader>e", function()
-                require("neo-tree.command").execute({
-                    source = "filesystem",
-                    reveal = true,
-                    position = "left"
-                })
-            end, {desc = "Open Neotree"}
-        }
-    }
+    -- keys = {
+    --     {
+    --         "<leader>e", function()
+    --             require("neo-tree.command").execute({
+    --                 source = "filesystem",
+    --                 reveal = true,
+    --                 position = "left"
+    --             })
+    --         end, {desc = "Open Neotree"}
+    --     }
+    -- }
 }

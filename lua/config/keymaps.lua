@@ -31,6 +31,12 @@ vim.keymap.set({ "n", "v" }, "d", '"_d')
 vim.keymap.set({ "n", "v" }, "c", '"_c')
 vim.keymap.set({ "n", "v" }, "x", '"_x')
 
+-- Neotree
+vim.keymap.set('n', '<leader>e', "<cmd>Neotree toggle<cr>", {
+  desc = "Toggle Neo-tree",
+  silent = true,
+})
+
 -- ToggleTerm
 vim.keymap.set("t", "<Esc>", [[<C-\><C-n>:ToggleTerm<CR>]] ,{desc = "Code action"})
 
