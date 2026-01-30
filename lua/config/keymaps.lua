@@ -18,10 +18,10 @@ vim.keymap.set("n", "<leader>cr", [[<cmd>%s/\r\+$//<CR>]], {desc = "Remove all c
 vim.keymap.set("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<cr>", {desc = "Code action"})
 
 -- Moving between windows
-vim.keymap.set({ "n", "t" }, "<leader>l", "<cmd>wincmd l<cr>", {desc = "Move to right window"})
-vim.keymap.set({ "n", "t" }, "<leader>h", "<cmd>wincmd h<cr>", {desc = "Move to left window"})
-vim.keymap.set({ "n", "t" }, "<leader>k", "<cmd>wincmd k<cr>", {desc = "Move to up window"})
-vim.keymap.set({ "n", "t" }, "<leader>j", "<cmd>wincmd j<cr>", {desc = "Move to down window"})
+-- vim.keymap.set({ "n", "t" }, "<leader>l", "<cmd>wincmd l<cr>", {desc = "Move to right window"})
+-- vim.keymap.set({ "n", "t" }, "<leader>h", "<cmd>wincmd h<cr>", {desc = "Move to left window"})
+-- vim.keymap.set({ "n", "t" }, "<leader>k", "<cmd>wincmd k<cr>", {desc = "Move to up window"})
+-- vim.keymap.set({ "n", "t" }, "<leader>j", "<cmd>wincmd j<cr>", {desc = "Move to down window"})
 
 -- Remap Visual block kemap
 vim.keymap.set({ "n", "v"}, "<C-q>", "<C-v>", { noremap = true})

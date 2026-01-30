@@ -2,8 +2,8 @@ return{
     "akinsho/toggleterm.nvim",
     version = "*",
     config = function()
-        vim.keymap.set("n", "<C-\\>", "<cmd>ToggleTerm<cr>", { silent = true })
-        vim.keymap.set("t", "<C-\\>", "<cmd>ToggleTerm<cr>", { silent = true })
+        vim.keymap.set("n", "<C-\\>", "<cmd>ToggleTerm direction=float<cr>", { silent = true })
+        vim.keymap.set("t", "<C-\\>", "<cmd>ToggleTerm direction=float<cr>", { silent = true })
         vim.keymap.set("n", "<leader>rp", function()
             vim.cmd("w")
             local file = vim.fn.expand("%")
