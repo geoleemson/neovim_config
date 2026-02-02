@@ -52,3 +52,13 @@ vim.opt.updatetime = 250
 
 -- Clipboard
 vim.opt.clipboard = "unnamedplus" -- Use system clipboard
+
+-- Windows settings
+if vim.fn.has('win32') == 1 then
+    vim.o.shell = 'powershell'
+    vim.o.shellcmdflag = '-NoLogo -ExecutionPolicy Bypass -Command ' -- For running commands
+    vim.o.shellredir = '-join | Out-File -Encoding utf8 %s' -- For redirection
+    vim.o.shellpipe = '2>&1 | Out-File -Encoding utf8 %s' -- For piping
+    vim.o.shellquote = ''
+    vim.o.shellxquote = ''
+end
