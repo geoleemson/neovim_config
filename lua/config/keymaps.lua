@@ -58,3 +58,8 @@ vim.keymap.set("v", ">", ">gv", {desc = "Indent right"})
 vim.keymap.set("v", "<C-_>", "gcgv", { remap = true, desc = "Comment block"})
 vim.keymap.set("v", "<C-/>", "gcgv", { remap = true, desc = "Comment block"})
 vim.keymap.set("v", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<cr>", {desc = "Code action"})
+
+--Auto Indent
+--Specific block: Select block, press =
+--Current line: Press ==
+--Entire file: gg=G

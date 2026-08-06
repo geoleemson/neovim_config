@@ -1,6 +1,8 @@
 --Keybindings--
---Hypen: To open oil explorer
+--Hyphen: To open oil explorer
+--Hyphen(inside oil explorer): Go back a folder
 --<leader>Hyphen: To open explorer in float mode
+--q: quit oil explorer
 
 --Other features
 --Can create files like entering lines in code
