@@ -59,6 +59,16 @@ vim.keymap.set("v", "<C-_>", "gcgv", { remap = true, desc = "Comment block"})
 vim.keymap.set("v", "<C-/>", "gcgv", { remap = true, desc = "Comment block"})
 vim.keymap.set("v", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<cr>", {desc = "Code action"})
 
+-- Persistance
+-- load the session for the current directory
+vim.keymap.set("n", "<leader>ps", function() require("persistence").load() end)
+-- select a session to load
+vim.keymap.set("n", "<leader>pS", function() require("persistence").select() end)
+-- load the last session
+vim.keymap.set("n", "<leader>pl", function() require("persistence").load({ last = true }) end)
+-- stop Persistence => session won't be saved on exit
+vim.keymap.set("n", "<leader>pd", function() require("persistence").stop() end)
+
 --Auto Indent
 --Specific block: Select block, press =
 --Current line: Press ==
