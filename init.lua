@@ -1,4 +1,4 @@
--- Path ~/.config/nvim/lua is added automatically
+-- Path '~/.config/nvim/lua' is added automatically to the parameters below
 -- If the provided name is a folder it loads the init file inside
 -- If it's a file, it loads that
 require("config")

@@ -55,7 +55,7 @@ return {
       end
 
       -- Apply the colorscheme, then enforce transparency on key UI groups
-      vim.cmd.colorscheme("tokyonight")
+      -- vim.cmd.colorscheme("tokyonight")
       set_transparent_groups()
     end,
   },
