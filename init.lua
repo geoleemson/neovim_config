@@ -1,6 +1,11 @@
+-- init.lua
+-- This is the first file that is loaded when neovim starts
+-- Then we are loading the folder like mentioned below
+
 -- Path '~/.config/nvim/lua' is added automatically to the parameters below
 -- If the provided name is a folder it loads the init file inside
 -- If it's a file, it loads that
+-- Here I'm just loading config/init.lua and lazyvim.lua file
 require("config")
 require("lazyvim")
 

@@ -6,6 +6,6 @@ return {
   config = function()
     -- Set background to dark or light
     vim.opt.background = "dark" -- or "light"
-    vim.cmd("colorscheme PaperColor")
+    -- vim.cmd("colorscheme PaperColor")
   end,
 }

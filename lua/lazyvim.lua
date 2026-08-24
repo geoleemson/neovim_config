@@ -11,9 +11,13 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Don't use two setup lines for multiple folders
 -- Use the below format and use as many folders as you want
+-- that contain lua files
 require("lazy").setup({
     { import = "plugins"},
     { import = "plugins.lsp"},
+    { import = "themes"},
 })
+
+-- setting theme after loading it above
+vim.cmd("colorscheme rose-pine")
