@@ -5,6 +5,9 @@ vim.diagnostic.config({
     virtual_text = true,
 })
 
+-- Theme
+-- vim.cmd.colorscheme("tokyonight")
+
 -- Line numbers
 vim.opt.number = true            -- Show absolute line numbers
 vim.opt.relativenumber = true    -- Show relative line numbers for easier movement
