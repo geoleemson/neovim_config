@@ -1,6 +1,36 @@
+## Basics
+Dashboard
+- Type ':Lazy' to bring up the Lazy Dashboard
+- Here you can update plugins, clean, remove and so on
+
 ## Workflow
 init.lua
 - This is the first file that is loaded when neovim opens
+
+## Language Server Working
+The different parts of an IDE and how they are related and working together
+(It is not just a simple text editor)
+Editor
+- The actual text editor, which is neovim
+LSP Client(Native)
+- Native meaning it is inbuilt in neovim(in newer versions)
+LSP Configuration(nvim-lspconfig)
+- Even with native LSP client you need this to actual make neovim talk to the respective language tool
+- For example, if python file is opened -> lspconfig will provided the right command/settings to boot up Pyright
+Language Server Manager(mason.nvim)
+- Package Manager for installing the various Language Servers out there
+Language Server
+- The actual brains of the language tool that does all the linting, formatting, autocompletion and so on
+Autocompletion Engine(nvim-cmp, blink.cmp)
+- Tool used to display the suggestions returned by the language server
+- Visual UI plugin for generating the floating dropdown menu
+Snippet Engine(LuaSnip)
+- Handles the autocompletion you have selected and expands it
+Linters & Formatters(conform.nvim, nvim-lint)
+- Linters find the syntax errors
+- Formatters fix the errors
+Code Actions
+- Suggestions provided by the LSP
 
 ## Themes
 Basics
