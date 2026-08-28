@@ -123,3 +123,13 @@ return {
 - Toast like instead of 3 lines of text at the bottom
 ### Visual
 - When cursor is on a word, highlight other similar words
+### Code
+- Collapse blocks
+
+## Lazy Option
+### 'false'
+- Means: Load the plugin immediately after Neovim starts
+### 'true'
+- Means: Only load the plugin when the event happens
+- The event is provided as a paramter
+- If you specify event, you don't need to write lazy=false line
