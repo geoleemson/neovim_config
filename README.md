@@ -21,6 +21,7 @@
 | File Finder    | Telescope   |
 | Terminal       | ToggleTerm  |
 | Hotkeys        | which-key   |
+| Quality of Life | Snacks     |
 ### Lsp Plugins
 | Feature              | Plugin      |
 | -------------------- | ----------- |
@@ -118,3 +119,7 @@ return {
 - Opening a terminal opens in cwd
 - Having multiple terminals in tab format
 - Switching between the editor and terminal
+### Notifications
+- Toast like instead of 3 lines of text at the bottom
+### Visual
+- When cursor is on a word, highlight other similar words
