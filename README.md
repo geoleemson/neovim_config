@@ -125,6 +125,8 @@ return {
 - When cursor is on a word, highlight other similar words
 ### Code
 - Collapse blocks
+### Search
+- Search in a directory through all files like in notepad++
 
 ## Lazy Option
 ### 'false'

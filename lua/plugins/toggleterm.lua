@@ -1,10 +1,12 @@
 return{
     "akinsho/toggleterm.nvim",
     version = "*",
+    enabled = true,
     start_in_insert = true,
     config = function()
         vim.keymap.set("n", "<C-\\>", "<cmd>ToggleTerm direction=float<cr>", { silent = true })
         vim.keymap.set("t", "<C-\\>", "<cmd>ToggleTerm direction=float<cr>", { silent = true })
+        vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]], { silent = true })
         vim.keymap.set("n", "<leader>rp", function()
             vim.cmd("w")
             local file = vim.fn.expand("%")
@@ -28,6 +30,11 @@ return{
             size = 15,
             shade_terminals = true,
             start_in_insert = true,
+            on_open = function(term)
+                vim.schedule(function()
+                    vim.cmd("startinsert")
+                end)
+            end,
         })
     end
 }

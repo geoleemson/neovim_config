@@ -1,6 +1,7 @@
 return {
     -- Mini Nvim
     {"nvim-mini/mini.nvim", version = '*' },
+    enabled = false,
     -- MINI EXPLORER --
     -- Basics --
     -- :lua MiniFiles.open() - if you don't have any key bindings set
@@ -21,12 +22,6 @@ return {
     { 'nvim-mini/mini.cmdline', version = '*',
     config = function()
         require('mini.cmdline').setup({})
-    end
-    },
-    -- Notifications  
-    { 'nvim-mini/mini.notify', version = '*',
-    config = function()
-        require('mini.notify').setup({})
     end
     },
 }
