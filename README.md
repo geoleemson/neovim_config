@@ -22,6 +22,7 @@
 | Terminal       | ToggleTerm  |
 | Hotkeys        | which-key   |
 | Quality of Life | Snacks     |
+| Code Fold       | UFO        |
 ### Lsp Plugins
 | Feature              | Plugin      |
 | -------------------- | ----------- |
@@ -73,6 +74,14 @@ The different parts of an IDE and how they are related and working together
 - Mason is the package manager to handle different language servers
 To open Mason Dashboard
 - Type ':Mason'
+To: Check if a lsp is attached to a buffer
+- Type ':checkhealth vim.lsp'
+- Look under 'Active Clients' if listed
+To: Install a LSP for a language
+- Bring up Mason Dashboard
+- Search for the lsp(look up online for a good one for that language)
+- Hit 'i' to install it
+- Check top of Dashboard if it's installed
 
 ## Themes
 ### Basics

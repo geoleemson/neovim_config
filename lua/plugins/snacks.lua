@@ -4,10 +4,12 @@ return {
     lazy = false,
     ---@type snacks.Config
     opts = {
+        animate = { enabled = true },
         bigfile = { enabled = true },
         explorer = { enabled = true },
         indent = { enabled = true },
         input = { enabled = true },
+        lazygit = { enabled = true },
         picker = { enabled = true },
         notifier = { enabled = true },
         quickfile = { enabled = true },
@@ -37,6 +39,8 @@ return {
         { "<leader>th", function() Snacks.picker.colorschemes() end, desc = "Pick Themes" }, -- only sets it for current session
         { "<leader>ff", function() Snacks.picker.files() end, desc = "Find Files in cwd" }, 
         { "<leader>fn", function() Snacks.picker.lazy() end, desc = "Find files in nvim config" }, 
-        { "<leader>gd", function() Snacks.picker.git_diff() end, desc = "Git Diff" }, 
+        { "<leader>gd", function() Snacks.picker.lsp_definitions() end, desc = "Go to definition" }, 
+        -- Lazygit
+        { "<leader>lg", function() Snacks.lazygit() end, desc = "Open Lazygit" },
     },
 }
