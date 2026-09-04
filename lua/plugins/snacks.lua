@@ -10,7 +10,15 @@ return {
         indent = { enabled = true },
         input = { enabled = true },
         lazygit = { enabled = true },
-        picker = { enabled = true },
+        picker = { enabled = true,
+            win = {
+                input = {
+                    keys = {
+                        ["<Esc>"] = { "close", mode = { "n", "i" } },
+                    },
+                },
+            },
+        },
         notifier = { enabled = true },
         quickfile = { enabled = true },
         scope = { enabled = true },
@@ -38,7 +46,17 @@ return {
         { "<leader>:", function() Snacks.picker.command_history() end, desc = "Command History" },
         { "<leader>th", function() Snacks.picker.colorschemes() end, desc = "Pick Themes" }, -- only sets it for current session
         { "<leader>ff", function() Snacks.picker.files() end, desc = "Find Files in cwd" }, 
-        { "<leader>fn", function() Snacks.picker.lazy() end, desc = "Find files in nvim config" }, 
+        { "<leader>fg", function() Snacks.picker.grep() end, desc = "Grep in cwd" }, 
+        {
+            "<leader>fn",
+            function()
+                Snacks.picker.files({
+                    cwd = vim.fn.stdpath("config"),
+                })
+            end,
+            desc = "Find files in nvim config",
+        },
+        { "<leader>fl", function() Snacks.picker.lines() end, desc = "Find lines in current file" }, 
         { "<leader>gd", function() Snacks.picker.lsp_definitions() end, desc = "Go to definition" }, 
         -- Lazygit
         { "<leader>lg", function() Snacks.lazygit() end, desc = "Open Lazygit" },
