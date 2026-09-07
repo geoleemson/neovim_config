@@ -23,11 +23,13 @@
 | Hotkeys        | which-key   |
 | Quality of Life | Snacks     |
 | Code Fold       | UFO        |
+| Tab jump        | Neotab     |
 ### Lsp Plugins
 | Feature              | Plugin      |
 | -------------------- | ----------- |
 | LSP Package Manager  | Mason |
-| Autocompletion       | nvim-cmp, cmp-nvim-lsp  |
+| Autocompletion UI    | nvim-cmp |
+| Autocompletion bridge| cmp-nvim-lsp   |
 | Signature Help       | lsp-signature  |
 | CodeAction Lightbulb | lightbulb |
 
@@ -68,6 +70,23 @@ The different parts of an IDE and how they are related and working together
 - Formatters fix the errors
 ### Code Actions
 - Suggestions provided by the LSP
+
+## nvim-cmp vs cmp-nvim-lsp
+They are both autocompletion plugins but do different things
+### nvim-cmp
+nvim-cmp is the main completion engine
+It takes care of
+- How the menu appears
+- How you navigate it
+- What keymaps like <Tab> does
+- Which source to use
+It gets it's completion from many sources
+What you see when you start typing and what you do inside is nvim-cmp
+### cmp-nvim-lsp
+cmp-nvim-lsp is the bridge that connects nvim-cmp to the source 
+It allows nvim to get the completion results from LSP
+### My Setup
+I have removed [Tab] so that it can be used by neotab
 
 ## Mason
 ### What is it?

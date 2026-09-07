@@ -31,10 +31,10 @@ vim.keymap.set("n", "<leader>cr", [[<cmd>%s/\r\+$//<CR>]], {desc = "Remove all c
 vim.keymap.set("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<cr>", {desc = "Code action"})
 
 -- Moving between windows
--- vim.keymap.set({ "n", "t" }, "<leader>l", "<cmd>wincmd l<cr>", {desc = "Move to right window"})
--- vim.keymap.set({ "n", "t" }, "<leader>h", "<cmd>wincmd h<cr>", {desc = "Move to left window"})
--- vim.keymap.set({ "n", "t" }, "<leader>k", "<cmd>wincmd k<cr>", {desc = "Move to up window"})
--- vim.keymap.set({ "n", "t" }, "<leader>j", "<cmd>wincmd j<cr>", {desc = "Move to down window"})
+vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
+vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
+vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
+vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 
 -- Remap Visual block kemap
 vim.keymap.set({ "n", "v"}, "<C-q>", "<C-v>", { noremap = true})
@@ -47,11 +47,9 @@ vim.keymap.set({ "n", "v" }, "x", '"_x')
 -- ToggleTerm
 vim.keymap.set("t", "<Esc>", [[<C-\><C-n>:ToggleTerm<CR>]] ,{desc = "Code action"})
 
--- Telescope
---vim.keymap.set("n", "<leader>ff", ":Telescope find_files<CR>", {desc = "Telescope: find files"})
-
 -- Insert Mode
 vim.keymap.set("i", "jk", "<Esc>", {desc = "Escape from insert mode"})
+vim.keymap.set("i", "<C-o>", "<Esc>o", {desc = "Escape and go to next line"})
 
 -- Command Mode
 vim.keymap.set("c", "jk", "<Esc>", {desc = "Escape from command mode"})
