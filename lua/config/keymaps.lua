@@ -1,10 +1,23 @@
+local function close_snacks_explorer()
+    for _, win in ipairs(vim.api.nvim_list_wins()) do
+        local buf = vim.api.nvim_win_get_buf(win)
+
+        if vim.bo[buf].filetype == "snacks_picker_list" then
+            Snacks.explorer({action = "close"})
+        end
+    end
+end
+
 vim.g.mapleader = " "
 
 -- Normal Mode
 vim.keymap.set("n", "J", "5j", {desc = "save file"})
 vim.keymap.set("n", "K", "5k", {desc = "save file"})
 vim.keymap.set("n", "<leader>w", ":w<CR>", {desc = "save file"})
-vim.keymap.set("n", "q", ":qa<CR>", {desc = "Quit"})
+vim.keymap.set("n", "q", function ()
+    close_snacks_explorer()
+    vim.cmd("qa")
+end, {desc = "Quit"})
 vim.keymap.set("n", "<leader>x", ":q!<CR>", {desc = "Quit without saving"})
 vim.keymap.set("n", "<leader>s", ":source %<CR>", {desc = "Source the changes"})
 vim.keymap.set("n", "<S-c>", ":nohl<CR>", {desc = "Clear find highlights"})
