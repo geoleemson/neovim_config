@@ -24,6 +24,7 @@
 | Quality of Life | Snacks     |
 | Code Fold       | UFO        |
 | Tab jump        | Neotab     |
+| Surround        | Mini Surround |
 ### Lsp Plugins
 | Feature              | Plugin      |
 | -------------------- | ----------- |
