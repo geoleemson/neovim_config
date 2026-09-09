@@ -11,6 +11,8 @@ return {
         input = { enabled = true },
         lazygit = { enabled = true },
         picker = { enabled = true,
+            -- Use the layout below to change the layout style of picker windows
+            layout = "default", -- "default", "dropdown", "ivy", "select", "telescope"
             win = {
                 input = {
                     keys = {
@@ -56,7 +58,7 @@ return {
             end,
             desc = "Find files in nvim config",
         },
-        { "<leader>fl", function() Snacks.picker.lines() end, desc = "Find lines in current file" }, 
+        { "<leader>/", function() Snacks.picker.lines() end, desc = "Find lines in current file" }, 
         { "<leader>gd", function() Snacks.picker.lsp_definitions() end, desc = "Go to definition" }, 
         -- Lazygit
         { "<leader>lg", function() Snacks.lazygit() end, desc = "Open Lazygit" },

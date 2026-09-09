@@ -1,26 +1,13 @@
-local function close_snacks_explorer()
-    for _, win in ipairs(vim.api.nvim_list_wins()) do
-        local buf = vim.api.nvim_win_get_buf(win)
-
-        if vim.bo[buf].filetype == "snacks_picker_list" then
-            Snacks.explorer({action = "close"})
-        end
-    end
-end
-
 vim.g.mapleader = " "
 
 -- Normal Mode
-vim.keymap.set("n", "J", "5j", {desc = "save file"})
-vim.keymap.set("n", "K", "5k", {desc = "save file"})
-vim.keymap.set("n", "<leader>w", ":w<CR>", {desc = "save file"})
-vim.keymap.set("n", "q", function ()
-    close_snacks_explorer()
-    vim.cmd("qa")
-end, {desc = "Quit"})
+vim.keymap.set("n", "J", "5j", {desc = "Jump down 5 lines"})
+vim.keymap.set("n", "K", "5k", {desc = "Jump up 5 lines"})
+vim.keymap.set("n", "<C-s>", ":w<CR>", {desc = "save file"})
+vim.keymap.set("n", "q", ":qa<CR>", {desc = "Quit"})
+vim.keymap.set("n", "<leader>w", ":w<CR>", {desc = "Quit without saving"})
 vim.keymap.set("n", "<leader>x", ":q!<CR>", {desc = "Quit without saving"})
 vim.keymap.set("n", "<leader>s", ":source %<CR>", {desc = "Source the changes"})
-vim.keymap.set("n", "<S-c>", ":nohl<CR>", {desc = "Clear find highlights"})
 vim.keymap.set("n", "<C-a>", "gg<S-v>G", {desc = "Select all"})
 vim.keymap.set("n", "<C-_>", "gcc", { remap = true, desc = "Comment line"})
 vim.keymap.set("n", "<C-/>", "gcc", { remap = true, desc = "Comment line"})
@@ -29,6 +16,7 @@ vim.keymap.set("n", "<leader>y", "<cmd>Telescope current_buffer_fuzzy_find<cr>",
 vim.keymap.set("n", "<leader>tw", [[<cmd>%s/\s\+$//e<cr>]], {desc = "Remove trailing whitespaces"})
 vim.keymap.set("n", "<leader>cr", [[<cmd>%s/\r\+$//<CR>]], {desc = "Remove all carriages"})
 vim.keymap.set("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<cr>", {desc = "Code action"})
+vim.keymap.set("n", "<Esc>", ":nohl<Esc>", {silent = true, desc = "Clear find highlights"})
 
 -- Moving between windows
 vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
@@ -50,14 +38,17 @@ vim.keymap.set("t", "<Esc>", [[<C-\><C-n>:ToggleTerm<CR>]] ,{desc = "Code action
 -- Insert Mode
 vim.keymap.set("i", "jk", "<Esc>", {desc = "Escape from insert mode"})
 vim.keymap.set("i", "<C-o>", "<Esc>o", {desc = "Escape and go to next line"})
+vim.keymap.set("i", "<C-s>", "<Esc>:w<CR>", {desc = "eave file while typing"})
 
 -- Command Mode
 vim.keymap.set("c", "jk", "<Esc>", {desc = "Escape from command mode"})
 
 -- Visual Mode
-vim.keymap.set("v", "oi", "<Esc>", {desc = "Escape from visual selection mode"})
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", {desc = "moves lines down in visual selection"})
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", {desc = "moves lines down in visual selection"})
+vim.keymap.set("v", "<C-s>", ":w<CR>", {desc = "save file"})
+vim.keymap.set("v", "J", "5j", { noremap = true, silent = true })
+vim.keymap.set("v", "K", "5k", { noremap = true, silent = true })
+vim.keymap.set("v", "<C-j>", ":m '>+1<CR>gv=gv", {desc = "moves lines down in visual selection"})
+vim.keymap.set("v", "<C-k>", ":m '<-2<CR>gv=gv", {desc = "moves lines down in visual selection"})
 vim.keymap.set("v", "<", "<gv", {desc = "Indent left"})
 vim.keymap.set("v", ">", ">gv", {desc = "Indent right"})
 vim.keymap.set("v", "<C-_>", "gcgv", { remap = true, desc = "Comment block"})
