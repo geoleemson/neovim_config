@@ -9,7 +9,7 @@ return {
       style = "night",
 
       -- Transparency: removes background so the terminal shows through
-      transparent = false,
+      transparent = true,
 
       -- Also make sidebars and floats transparent to match terminal acrylic
       styles = {

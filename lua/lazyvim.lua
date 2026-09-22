@@ -20,4 +20,4 @@ require("lazy").setup({
 })
 
 -- setting theme after loading it above
-vim.cmd("colorscheme rose-pine")
+vim.cmd("colorscheme tokyonight")
