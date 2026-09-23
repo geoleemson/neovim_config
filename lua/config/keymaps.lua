@@ -17,6 +17,14 @@ vim.keymap.set("n", "<leader>tw", [[<cmd>%s/\s\+$//e<cr>]], {desc = "Remove trai
 vim.keymap.set("n", "<leader>cr", [[<cmd>%s/\r\+$//<CR>]], {desc = "Remove all carriages"})
 vim.keymap.set("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<cr>", {desc = "Code action"})
 vim.keymap.set("n", "<Esc>", ":nohl<Esc>", {silent = true, desc = "Clear find highlights"})
+-- Insert blank line below
+vim.keymap.set('n', '<leader>o', function()
+  vim.fn.append(vim.fn.line('.'), '')
+end, { desc = 'Insert blank line below' })
+-- Insert blank line above
+vim.keymap.set('n', '<leader>O', function()
+  vim.fn.append(vim.fn.line('.') - 1, '')
+end, { desc = 'Insert blank line above' })
 
 -- Moving between windows
 vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })

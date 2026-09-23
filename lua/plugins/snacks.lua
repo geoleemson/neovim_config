@@ -45,7 +45,7 @@ return {
         { "<leader>e", function() Snacks.explorer() end, desc = "File Explorer" },
         -- Picker 
         { "<leader>n", function() Snacks.picker.notifications() end, desc = "Notification History" },
-        { "<leader>:", function() Snacks.picker.command_history() end, desc = "Command History" },
+        { "<leader>;", function() Snacks.picker.command_history() end, desc = "Command History" },
         { "<leader>th", function() Snacks.picker.colorschemes() end, desc = "Pick Themes" }, -- only sets it for current session
         { "<leader>ff", function() Snacks.picker.files() end, desc = "Find Files in cwd" }, 
         { "<leader>fg", function() Snacks.picker.grep() end, desc = "Grep in cwd" }, 
