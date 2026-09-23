@@ -11,6 +11,16 @@ return {
         input = { enabled = true },
         lazygit = { enabled = true },
         picker = { enabled = true,
+            -- for explorer to see gitignored and hidden files
+            hidden = true,
+            ignored = true,
+            -- for picker to see gitignored and hidden files
+            sources = {
+                files = {
+                    hidden = true,
+                    ignored = true,
+                },
+            },
             -- Use the layout below to change the layout style of picker windows
             layout = "default", -- "default", "dropdown", "ivy", "select", "telescope"
             win = {
