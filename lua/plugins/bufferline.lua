@@ -6,6 +6,8 @@ return{
         vim.keymap.set("n", "<leader>bb", "<cmd>BufferLinePick<cr>", { desc = "Buffer picker" })
         vim.keymap.set("n", "<leader>bo", "<cmd>BufferLineCloseOthers<cr>", { desc = "Close other tabs" })
         vim.keymap.set("n", "<leader>bc", "<cmd>bdelete<cr>", { desc = "Close current tab" })
+        vim.keymap.set("n", "<C-9>", "<cmd>BufferLineMovePrev<cr>", { desc = "Move buffer left" })
+        vim.keymap.set("n", "<C-0>", "<cmd>BufferLineMoveNext<cr>", { desc = "Move buffer right" })
         require("bufferline").setup({})
     end
 }

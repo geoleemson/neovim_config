@@ -17,6 +17,12 @@ return {
         require('mini.files').setup({})
     end
     },
+    -- Split Join
+    { 'nvim-mini/mini.splitjoin', version = '*',
+        config = function()
+            require('mini.splitjoin').setup({})
+        end
+    },
     -- MINI CMDLINE --
     -- Autocompletion for vim command line
     { 'nvim-mini/mini.cmdline', version = '*',
