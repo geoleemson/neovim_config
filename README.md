@@ -9,6 +9,14 @@
 - [Plugin Types](#plugin-types)
 - [Needs have come across](#needs-have-come-across)
 
+## Lazy Package Manager
+Lazy.nvim is a Package Manager used to install and manage the plugins
+### Local Directory
+When a plugin is installed Lazy.nvim downloads it to:
+```
+~/.local/share/nvim/lazy/
+```
+
 ## Plugins Table
 ### Features
 | Feature        | Plugin      |
@@ -164,3 +172,9 @@ return {
 - Means: Only load the plugin when the event happens
 - The event is provided as a paramter
 - If you specify event, you don't need to write lazy=false line
+
+## Dependencies
+Dependencies to install
+| Dependencies   | Plugin that needs it |
+| -------------- | ----------- |
+| Node and Yarn  | Markdown Preview |
