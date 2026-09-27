@@ -44,12 +44,8 @@ vim.keymap.set({ "n", "v" }, "x", '"_x')
 vim.keymap.set("t", "<Esc>", [[<C-\><C-n>:ToggleTerm<CR>]] ,{desc = "Code action"})
 
 -- Insert Mode
-vim.keymap.set("i", "jk", "<Esc>", {desc = "Escape from insert mode"})
 vim.keymap.set("i", "<C-o>", "<Esc>o", {desc = "Escape and go to next line"})
 vim.keymap.set("i", "<C-s>", "<Esc>:w<CR>", {desc = "eave file while typing"})
-
--- Command Mode
-vim.keymap.set("c", "jk", "<Esc>", {desc = "Escape from command mode"})
 
 -- Visual Mode
 vim.keymap.set("v", "<C-s>", ":w<CR>", {desc = "save file"})

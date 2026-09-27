@@ -1,10 +1,8 @@
--- -- ~/.config/nvim/lua/plugins/tokyonight.lua
 return {
-  {
-    "folke/tokyonight.nvim",
-    lazy = false,      -- load during startup
-    priority = 1000,   -- load before other plugins
-    opts = {
+  "folke/tokyonight.nvim",
+  lazy = false,
+  priority = 1000,
+  opts = {
       -- Theme variant: "storm", "moon", "night", "day"
       style = "night",
 
@@ -13,50 +11,39 @@ return {
 
       -- Also make sidebars and floats transparent to match terminal acrylic
       styles = {
-        sidebars = "transparent", -- set to "dark" for no transparent and "transparent" for transparent
-        floats = "transparent",
-        comments = { italic = true },
-        keywords = { italic = true },
+          sidebars = "transparent", -- set to "dark" for no transparent and "transparent" for transparent
+          floats = "transparent",
+          comments = { italic = true },
+          keywords = { italic = true }, -- programming keywords
       },
 
       terminal_colors = true,
       dim_inactive = false,
       lualine_bold = true,
 
-      -- Optional fine-tuning (example):
       on_highlights = function(hl, c)
-        -- Make line number of current line pop a bit
-        hl.CursorLineNr = { fg = c.orange, bold = true }
-        -- For relative numbers
-        hl.LineNrAbove = {fg = c.blue, bold = false}
-        hl.LineNrBelow = {fg = c.blue, bold = false}
-        -- If you want popups (floats) to still have a subtle border:
-        hl.FloatBorder = { fg = c.blue }
+          -- Number line color
+          hl.CursorLineNr = {fg = c.orange, bold = true}
+          hl.LineNrAbove = {fg = c.blue, bold = false}
+          hl.LineNrBelow = {fg = c.blue, bold = false}
+          -- Cursor Color
+          hl.NormalCursor = {fg = "#1a1b26", bg = "#808080",}
+          hl.InsertCursor = {fg = "#1a1b26", bg = "#7dcfff",}
+          -- Floating Border color
+          hl.FloatBorder = { fg = c.blue }
       end,
-    },
-    config = function(_, opts)
-      require("tokyonight").setup(opts)
-
-      -- If you ever toggle transparency at runtime, you can also make sure these are "none":
-      local function set_transparent_groups()
-        local groups = {
-          "Normal", "NormalNC", "NormalFloat", "SignColumn",
-          "LineNr", "FoldColumn", "CursorLine", "CursorColumn",
-          "StatusLine", "StatusLineNC", "EndOfBuffer", "MsgArea",
-          "WinSeparator",
-        }
-        for _, g in ipairs(groups) do
-          local ok, def = pcall(vim.api.nvim_get_hl, 0, { name = g, link = false })
-          if ok then
-            def.bg = "none"
-            vim.api.nvim_set_hl(0, g, def)
-          end
-        end
-      end
-
-      -- Apply the colorscheme, then enforce transparency on key UI groups
-      vim.cmd.colorscheme("tokyonight")
-      set_transparent_groups()
-    end,
   },
+  config = function(_, opts)
+      require("tokyonight").setup(opts)
+      vim.cmd.colorscheme("tokyonight")
+
+      -- Normal: block
+      -- Insert: vertical bar
+      vim.opt.guicursor = {
+          "n-v-c:block-NormalCursor",
+          "i-ci-ve:ver25-InsertCursor",
+          "r-cr:hor20-NormalCursor",
+          "o:hor50-NormalCursor",
+      }
+  end,
 }
