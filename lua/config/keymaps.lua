@@ -3,6 +3,7 @@ vim.g.mapleader = " "
 -- Normal Mode
 vim.keymap.set("n", "J", "5j", {desc = "Jump down 5 lines"})
 vim.keymap.set("n", "K", "5k", {desc = "Jump up 5 lines"})
+vim.keymap.set("n", "E", "ge", {desc = "Reverse e"})
 vim.keymap.set("n", "<C-s>", ":w<CR>", {desc = "save file"})
 vim.keymap.set("n", "q", ":qa<CR>", {desc = "Quit"})
 vim.keymap.set("n", "<leader>w", ":w<CR>", {desc = "Quit without saving"})

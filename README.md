@@ -111,6 +111,25 @@ To: Install a LSP for a language
 - Hit 'i' to install it
 - Check top of Dashboard if it's installed
 
+## LSP Benfits
+These are the various benefits to having an LSP running:
+#### Go To definitions
+Useful to jump to the definition of a function
+#### Diagnostics
+Shows errors/warnings directly in your code
+#### Autocomplete
+Suggestions completions for functions, variables, classes and so on
+#### Code Actions
+These are quick fixes that the LSP recognizes
+#### Signature Help
+Show function parameters while your typing
+#### Formatting
+Useful for automatic formatting
+#### Types of Diagnostics
+- Linting
+- Type Checking
+- Formatters
+
 ## Themes
 ### Basics
 - Type ':colorscheme '
