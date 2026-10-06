@@ -26,6 +26,21 @@ end, { desc = 'Insert blank line below' })
 vim.keymap.set('n', '<leader>O', function()
   vim.fn.append(vim.fn.line('.') - 1, '')
 end, { desc = 'Insert blank line above' })
+-- Copy full file path to system clipboard
+vim.keymap.set("n", "<leader>cp", function()
+    local path = vim.fn.expand("%:p")
+    if vim.fn.has("win32") == 1 then
+        path = path:gsub("/", "\\")
+    end
+    vim.fn.setreg("+", path)
+    vim.notify("Copied full path:\n" .. path)
+end, { desc = "Copy full path" })
+-- Copy file name only to system clipboard
+vim.keymap.set("n", "<leader>cn", function()
+    local name = vim.fn.expand("%:t")
+    vim.fn.setreg("+", name)
+    vim.notify("Copied file name: " .. name)
+end, { desc = "Copy file name" })
 
 -- Moving between windows
 vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
